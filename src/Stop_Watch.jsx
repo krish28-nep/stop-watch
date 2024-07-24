@@ -7,7 +7,7 @@ const Stop_Watch = () => {
       isPaused: !state.isPaused,
       content: state.isPaused ? "pause" : "resume",
     });
-    isRunning((preState) => !preState);
+    setRunning((preState) => !preState);
   };
   const initialTime = {
     Hours: 0,
@@ -65,7 +65,7 @@ const Stop_Watch = () => {
           <span className="Time">{format()}</span>
         </div>
         <div className="Controller">
-          <button className="Start" onclick={handleStart}>
+          <button className="Start" onClick={handleStart}>
             Start
           </button>
           <button className="Reset" onClick={handleReset}>
